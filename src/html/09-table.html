@@ -67,5 +67,32 @@
         <td colspan="2">170</td>
       </tr>
     </table>
+    <hr />
+    <!-- ... WAI-ARIA 속성을 사용 code... -->
+    <table role="table" aria-label="학생 성적표">
+      <thead>
+        <tr role="row">
+          <th role="columnheader" scope="col">이름</th>
+          <th role="columnheader" scope="col">국어</th>
+          <th role="columnheader" scope="col">영어</th>
+          <th role="columnheader" scope="col">수학</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr role="row">
+          <td role="cell">홍길동</td>
+          <td role="cell">90</td>
+          <td role="cell">85</td>
+          <td role="cell">95</td>
+        </tr>
+        <tr role="row">
+          <td role="cell">김철수</td>
+          <td role="cell">80</td>
+          <td role="cell">88</td>
+          <td role="cell">92</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- ...existing code... -->
   </body>
 </html>
