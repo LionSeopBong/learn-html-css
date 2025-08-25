@@ -31,5 +31,42 @@
         <button type="submit">전송</button>
       </fieldset>
     </form>
+    <hr />
+
+    <form method="post" action="https://formspree.io/f/xeqwwbwk">
+      <fieldset>
+        <div>
+          <label for="userSearch">검색어</label>
+          <input placeholder="검색어를 입력하세요" required id="userSearch" type="text" name="name" />
+        </div>
+        <div>
+          <label for="userPhone">전화번호</label>
+          <input required id="userPhone" type="number" name="Tell" />
+        </div>
+
+        <!--체크박스 서식-->
+        <div>
+          <input type="checkbox" checked name="HTML" />
+          <label for="">HTML</label>
+        </div>
+        <div>
+          <input type="checkbox" name="CSS" />
+          <label for="">CSS</label>
+        </div>
+        <!-- 라디오 서식-->
+        <!-- 암묵적인 레이블링 : 스크린리더 환경에서 이슈때문에 권장하지 않음-->
+        <div>
+          <input type="radio" checked name="radio" />
+          <label for="teamOne">회고 1팀</label>
+        </div>
+        <div>
+          <input type="radio" name="radio" />
+          <label for="teamTwo">회고 2팀</label>
+        </div>
+        <input type="submit" value="전송" />
+        <input type="reset" value="초기화" />
+        <input type="button" value="버튼" />
+      </fieldset>
+    </form>
   </body>
 </html>
