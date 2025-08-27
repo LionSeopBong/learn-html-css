@@ -1,1 +1,3 @@
-console.log('15기 화이팅!');
+document.querySelector('.flip-button').addEventListener('click', () => {
+  document.querySelector('.card').classList.toggle('is-flipped');
+});
