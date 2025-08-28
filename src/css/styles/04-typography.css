@@ -1,0 +1,16 @@
+body {
+  margin: 20px;
+}
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+}
+.wrapper {
+  font-size: 20px;
+}
+.wrapper blockquote {
+  font-size: 1.5em;
+}
+.like {
+  font-size: 1.5rem;
+}
