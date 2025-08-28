@@ -1,0 +1,20 @@
+/* 본문의 기본 여백 설정 */
+body {
+  margin: 20px;
+  color: gray;
+}
+a {
+  color: inherit;
+}
+/* 상속 */
+#coding .wrapper .like {
+  color: purple; /* 자식 요소에 상속 */
+}
+
+p.like {
+  color: blue;
+}
+/* 겹침 */
+.like {
+  color: red;
+}
