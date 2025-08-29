@@ -32,3 +32,32 @@ h1 {
   top: 0;
   z-index: 10;
 }
+
+.frontend,
+.euid {
+  position: relative;
+  padding: 10px;
+}
+.container {
+  background-color: #fcf;
+  margin-top: 20px;
+  p {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid currentColor;
+    position: relative;
+    top: -5px;
+    left: 5px;
+  }
+}
+
+/* z-index 속성*/
+.frontend {
+  background-color: #ff9;
+  left: 50px;
+  top: 30px;
+  z-index: 1;
+}
+.euid {
+  background-color: #9ff;
+}
