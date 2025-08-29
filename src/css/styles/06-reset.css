@@ -1,0 +1,33 @@
+.body {
+  margin: 20px;
+}
+
+.likelion {
+  background-color: #fcf;
+}
+
+.likelion ol {
+  padding-left: 40px;
+  list-style-type: circle;
+}
+
+.bootcamp {
+  background-color: #cff;
+}
+.bootcamp ol {
+  list-style-position: outside;
+  list-style-type: disc;
+  padding-left: 40px;
+}
+
+.frontend {
+  background-color: #ffc;
+}
+.frontend ul {
+  padding-left: 40px;
+  list-style-position: outside;
+  list-style-image: ('/src/assets/thumbnail/new.png');
+}
+.frontend ul {
+  list-style-image: ('/src/assets/thumbnail/new.png');
+}
