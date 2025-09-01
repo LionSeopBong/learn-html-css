@@ -16,8 +16,6 @@ body {
 }
 /* 아바타 컴포넌트*/
 .avatar {
-  background-color: aqua;
-
   --size: 64px;
 
   width: var(--size);
@@ -53,6 +51,7 @@ body {
   padding: 0;
   border: 0 none;
   position: relative;
+  vertical-align: top;
 
   --size: 64px;
 
@@ -73,16 +72,28 @@ body {
     height: 28.125%;
     border-radius: 50%;
     border: 2px solid #fff;
-    background-color: red;
-    /* position: absolute;
+    position: absolute;
     right: 0;
     bottom: 0;
-     */
   }
   &[aria-label='online']::after {
     background-color: #4cfe88;
   }
   &[aria-label='offline']::after {
     background-color: #dbdbdb;
+  }
+}
+
+.avatar-list {
+  display: flow-root;
+  padding: 10px 30px;
+
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 3%;
+
+  li {
+    float: left;
+    margin: 10px;
   }
 }
