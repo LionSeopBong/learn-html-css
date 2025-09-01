@@ -14,20 +14,20 @@ body {
 }
 /* position absolute*/
 .bootcamp {
-  background: #fcf;
+  background: red;
   position: absolute;
   left: 50px;
   top: 100px;
 }
 .school {
-  background: #cff;
+  background: blue;
   position: fixed;
   right: 0;
   bottom: 0;
 }
 /* position: sticky*/
 h1 {
-  background-color: #cfc;
+  background-color: green;
   position: sticky;
   top: 0;
   z-index: 10;
