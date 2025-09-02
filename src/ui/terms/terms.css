@@ -68,6 +68,7 @@ body {
   border: 1px solid var(--gray-700);
   border-radius: 5px;
   padding: var(--spacing);
+  width: 260px;
 
   .headline {
     font-size: 1.25rem;
@@ -77,15 +78,14 @@ body {
   .term {
     margin-top: calc(var(--spacing) - 4px);
   }
+
   & div:nth-child(3) {
-    background: plum;
     .subject,
     .description {
       float: left;
     }
     .thumbnail {
       float: right;
-      margin-right: 0;
     }
   }
 }
