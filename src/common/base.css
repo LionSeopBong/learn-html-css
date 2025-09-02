@@ -2,3 +2,8 @@
 body {
   font-family: 'SUIT', sans-serif;
 }
+/* 하이퍼 링크 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
