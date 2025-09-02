@@ -1,0 +1,27 @@
+body {
+  margin: 10px;
+}
+.menu-line {
+  display: flex;
+}
+.menu-bar {
+  width: 30px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.menu-bar span {
+  display: block;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+.logo {
+  margin-top: -4px;
+  margin-left: 10px;
+  width: 200px;
+  cursor: pointer;
+}

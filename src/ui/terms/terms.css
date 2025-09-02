@@ -1,0 +1,58 @@
+body {
+  margin: 20px;
+}
+/* 전체 218*
+이미지 60*16
+텍스트 가로 142 
+헤딩 폰트 사이즈 14px   
+*/
+
+/* .term {
+  background-color: antiquewhite;
+  width: 218px;
+  .subject {
+    width: 142px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #296897;
+    float: right;
+  }
+  .thumbnail {
+    float: left;
+    height: 60px;
+  }
+  .description {
+    margin-top: 5px;
+    width: 142px;
+    font-size: 14px;
+    float: right;
+  }
+} */
+/* 컴포넌트 */
+.term {
+  --accent-color: #296897;
+
+  background: #ffc;
+  display: flow-root;
+  font-size: 14px;
+
+  .subject {
+    font-weight: 600;
+    color: var(--accent-color);
+  }
+
+  .subject,
+  .description {
+    float: right;
+    width: calc(100% - 76px);
+  }
+
+  .thumbnail {
+    float: left;
+    margin-right: 16px;
+  }
+
+  .description {
+    margin-top: 10px;
+  }
+}
