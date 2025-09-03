@@ -1,0 +1,45 @@
+body {
+  margin: 20px;
+}
+.notification {
+  --black: #121212;
+  --green: #22be61;
+  --gray: #9b9a90;
+  --white: #fff;
+
+  border: 1px solid var(--gray);
+  border-radius: 0.25rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1.25rem;
+
+  /* 교차축(y)에 중점*/
+  align-items: center;
+
+  .notification-icon {
+    flex: 0 0 auto;
+  }
+
+  .notification-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  strong {
+    font-size: 18px;
+    color: var(--green);
+  }
+  time {
+    color: var(--green);
+    margin-inline-start: auto;
+    font-size: 0.6875rem;
+  }
+  p {
+    color: var(--gray);
+    /* 여기에 개행해서 밑으로 */
+    font-size: 1.125rem;
+    inline-size: 100%;
+  }
+}
