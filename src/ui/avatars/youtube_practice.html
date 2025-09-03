@@ -10,29 +10,45 @@
     <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
     <link rel="stylesheet" href="/src/common/index.css" />
     <link rel="stylesheet" href="/src/ui/avatars/youtube_practice.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <header>
     <div class="menu-line">
-      <figure class="menu-bar">
-        <span></span>
-        <span></span>
-        <span></span>
-      </figure>
-      <img src="/src/assets/practice/YTP_logo_1.png" class="logo" alt="Youtube Primium 홈" />
+      <div class="left-group">
+        <div class="menu-bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <img src="/src/assets/practice/YTP_logo_1.png" class="logo" alt="Youtube Primium 홈" />
+      </div>
+
+      <div class="right-group">
+        <form class="search-form">
+          <input type="text" class="search-bar" placeholder="검색" />
+          <button type="submit" class="search-botton">검색</button>
+          <img src="/src/assets/practice/mic_icon.png" class="mic_icon" alt="" />
+        </form>
+      </div>
     </div>
-    <hr />
-    <nav class="menu-items">
-      <a href="#">홈</a>
-      <a href="#">쇼츠</a>
-      <a href="#">구독</a>
-      <a href="#">보관함</a>
-      <a href="#">동영상</a>
-      <a href="#"></a>
-    </nav>
   </header>
   <body>
-    <a href="/index.html">Index로 이동</a>
-    <h1>유튜브 따라하기</h1>
-    <hr />
+    <div class="container">
+      <ul class="menu-sidebar">
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-house icon"></i>
+            <p>홈</p></a
+          >
+        </li>
+        <li>
+          <a href="#">쇼츠</a>
+        </li>
+        <li><a href="#">구독</a></li>
+        <li><a href="#">보관함</a></li>
+        <li><a href="#">동영상</a></li>
+        <li><a href="#">내페이지</a></li>
+      </ul>
+    </div>
   </body>
 </html>

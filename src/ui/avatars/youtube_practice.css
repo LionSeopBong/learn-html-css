@@ -1,12 +1,20 @@
-body {
-  margin: 10px;
+header {
+  padding: 10px;
 }
 .menu-line {
   display: flex;
+
+  justify-content: space-between;
 }
+.left-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .menu-bar {
   width: 30px;
-  height: 22px;
+  height: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -16,12 +24,60 @@ body {
 .menu-bar span {
   display: block;
   height: 4px;
-  background-color: #333;
+  background-color: #6b6b6b;
   border-radius: 2px;
 }
 .logo {
   margin-top: -4px;
   margin-left: 10px;
-  width: 200px;
+  width: 150px;
   cursor: pointer;
+}
+
+.search-form {
+  display: flex;
+  position: absolute;
+  left: 35%;
+  align-items: center;
+  .search-bar {
+    margin-top: -4px;
+    height: 30px;
+    border: 1px solid #6b6b6b;
+    border-radius: 10px 0 0 10px;
+    max-width: 400px;
+  }
+  .mic_icon {
+    margin-top: -4px;
+    height: 28px;
+    background: lightgray;
+    border-radius: 50%;
+  }
+}
+.search-botton {
+  margin-top: -4px;
+
+  width: 50px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 0 10px 10px 0;
+  border: 1px solid #6b6b6b;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+
+  .menu-sidebar {
+    background: yellowgreen;
+    width: 100px;
+    height: 100dvh;
+    align-items: center;
+    text-align: center;
+  }
+  .icon {
+    font-size: 30px;
+  }
+}
+.menu-sidebar > li {
+  padding: 10px;
 }

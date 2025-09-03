@@ -1,0 +1,52 @@
+body {
+  margin: 10px;
+}
+h1 {
+  margin-block-end: 20px;
+}
+.members-wrapper {
+  background-color: rgb(243, 243, 243);
+  block-size: 200px;
+  overflow: scroll;
+  font-size: 14px;
+  table {
+    width: 100%;
+    /* border-collapse: collapse; 여백없애기 */
+    border-spacing: 0; /* 이것도 보더 간격 없애기 */
+  }
+  .number {
+    /* inline-size 웹페이지에 크기에 따른 퍼센티지 */
+    inline-size: 10%;
+  }
+  .name {
+    inline-size: 20%;
+  }
+  .email {
+    inline-size: 30%;
+  }
+  .phone {
+    inline-size: 40%;
+  }
+}
+thead tr {
+  /* 보기 행 고정 */
+  position: sticky;
+  top: 0;
+}
+th {
+  /* 텍스트가 줄바꿈 없이 계속 이어지도록 만들고 더 이상 축소하지 않게 만듬 */
+  white-space: nowrap;
+}
+th,
+td {
+  text-align: center;
+  padding: 0.5em 1em;
+}
+thead tr,
+tfoot tr {
+  background: var(--black);
+  color: white;
+}
+tbody tr:nth-child(even) {
+  background: var(--gray);
+}
