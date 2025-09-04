@@ -1,24 +1,28 @@
-body {
-  margin: 20px;
-}
 .notification {
   --black: #121212;
   --green: #22be61;
   --gray: #9b9a90;
   --white: #fff;
 
-  border: 1px solid var(--gray);
+  --point-color: var(--green);
+  --text-color: var(--gray);
+  --bg-color: var(--white);
+
+  border: 1px solid currentColor;
+  color: var(--text-color);
   border-radius: 0.25rem;
   padding: 1.25rem;
   display: flex;
   flex-flow: row nowrap;
-  gap: 1.25rem;
-
-  /* 교차축(y)에 중점*/
+  column-gap: 1.25rem;
   align-items: center;
 
   .notification-icon {
     flex: 0 0 auto;
+
+    rect {
+      fill: var(--point-color);
+    }
   }
 
   .notification-content {
@@ -26,20 +30,77 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-  }
-  strong {
-    font-size: 18px;
-    color: var(--green);
-  }
-  time {
-    color: var(--green);
-    margin-inline-start: auto;
-    font-size: 0.6875rem;
-  }
-  p {
-    color: var(--gray);
-    /* 여기에 개행해서 밑으로 */
-    font-size: 1.125rem;
-    inline-size: 100%;
+    row-gap: 4px;
+
+    strong,
+    time {
+      color: var(--point-color);
+    }
+
+    strong {
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+
+    time {
+      font-size: 0.6875rem;
+    }
+
+    p {
+      inline-size: 100%;
+      font-size: 0.875rem;
+    }
   }
 }
+
+/* 레이아웃 */
+.notification-wrapper {
+  background: #ffc;
+
+  .notification {
+    --point-color: red;
+  }
+}
+.notification-practice {
+  --gap: 30px;
+
+  display: flex;
+
+  flex-flow: row wrap;
+  row-gap: var(--gap);
+  @media (width > 601px) {
+    column-gap: var(--gap);
+  }
+  .notification {
+    inline-size: 100%;
+    @media (width >= 601px) {
+      inline-size: calc(50% - (var(--gap) / 2));
+    }
+    @media (width >= 1001px) {
+      inline-size: calc((100% - var(--gap) * 3) / 4);
+    }
+  }
+}
+
+/* flex-grow: 1; */
+/* inline-size: calc(50% - (var(--gap))); */
+
+/* @media (min-width: 601px) {
+  .notification-practice {
+    --gap: 20px;
+    flex-flow: row wrap;
+    column-gap: var(--gap);
+
+    .notification {
+      flex: 1 1 0;
+    }
+  }
+}
+
+@media (min-width: 1001px) {
+  .notification {
+  }
+} */
+
+/* @media (min-width: 601px) and (max-width: 1000px) {
+} */
