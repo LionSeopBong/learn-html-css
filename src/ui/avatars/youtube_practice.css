@@ -1,6 +1,6 @@
 header {
   padding: 10px;
-}
+/* }
 .menu-line {
   display: flex;
 
@@ -95,5 +95,7 @@ header {
     font-size: 30px;
   }
   .content-management {
+    inset-block-start: 0;
+    inset-inline-start: 0;
   }
-}
+} */
