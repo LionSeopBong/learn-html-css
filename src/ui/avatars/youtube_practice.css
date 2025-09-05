@@ -112,6 +112,7 @@ body {
   --color-header-back: #f0f0ef;
 
   display: flex;
+  flex-flow: row nowrap;
   height: 70px;
   align-items: center;
   justify-content: space-between;
