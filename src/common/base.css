@@ -48,3 +48,17 @@ a {
   --gray-800: #2f2f2f;
   --gray-900: #171717;
 }
+/* svg 이미지 */
+.svg-img {
+  width: 100%;
+  height: auto;
+}
+/* copy component */
+.copy-component {
+  display: flex;
+  background: black;
+  color: white;
+  margin-block: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
