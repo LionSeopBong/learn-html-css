@@ -5,6 +5,7 @@
   --green-300: #03cca8;
 
   --blue-100: #e9f0fd;
+  --red-100: #ff1414;
 
   --gray-100: #bcc3c7;
   --gray-200: #9b9a90;
@@ -17,7 +18,6 @@
 }
 
 body {
-  margin: 20px;
 }
 
 /* 로고 컴포넌트 */
@@ -130,5 +130,123 @@ body {
   input:checked + label::after {
     content: 'ON';
     color: var(--green-100);
+  }
+}
+
+/* 입력서식 컴포넌트 */
+.input {
+  --size: 72px;
+
+  display: inline-flex;
+  flex-flow: row wrap;
+  block-size: var(--size);
+  align-content: space-between;
+
+  input {
+    inline-size: 100%;
+    block-size: 48px;
+    border: 1px solid var(--gray-200);
+    padding-inline-start: 0.5em;
+  }
+  .error-message {
+    color: var(--red-100);
+    font-size: 0.625rem;
+    background: pink;
+    visibility: hidden;
+    /* display: none; */
+  }
+  input:user-invalid + .error-message {
+    visibility: visible;
+  }
+}
+.sr-only {
+  display: none;
+  /* visibility: visible; */
+}
+
+/* 레이아웃 */
+.header {
+  margin: 70px 45px;
+  text-align: center;
+
+  @media (width >= 768px) {
+    margin-block: 100px 50px;
+  }
+  .logo {
+    vertical-align: top;
+  }
+}
+.main {
+  padding: 0 15px;
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+
+    @media (width >= 768px) {
+      inline-size: 460px;
+      margin-inline: auto;
+    }
+
+    .input,
+    .checkbox-wrapper,
+    .button {
+      inline-size: 100%;
+    }
+
+    .input {
+    }
+    .checkbox-wrapper {
+      order: 1; /* 순서를 마지막으로 정렬 */
+      margin-top: 10px;
+      display: flex;
+      flex-flow: end;
+      justify-content: end;
+      align-items: center;
+      @media (width < 768px) {
+        .textlink-new,
+        .switch {
+          display: none;
+        }
+      }
+      @media (width >= 768px) {
+        justify-content: start;
+        .checkbox {
+          margin-inline-end: auto;
+        }
+        .switch {
+          inline-size: 2em;
+          display: flex;
+          justify-content: end;
+        }
+      }
+    }
+
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      block-size: 56px;
+    }
+
+    /* 상태 디자인 */
+    :focus {
+      outline: 0 none;
+    }
+
+    .input input:focus-visible {
+      border: 1px solid var(--green-100);
+      background: var(--blue-100);
+    }
+
+    .button:focus-visible {
+      box-shadow: 0 0 1px 2px #f00;
+    }
+
+    .checkbox-wrapper *:focus-visible {
+      outline: 2px solid var(--green-100);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
   }
 }
