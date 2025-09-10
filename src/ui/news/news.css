@@ -1,0 +1,97 @@
+:root {
+  --white: #fff;
+  --gray: #878787;
+  --gray-dark: #14182c;
+  --blue-100: #3030e0;
+  --blue-200: #24388d;
+  --blue-300: #111166;
+
+  --start-color: var(--blue-100);
+  --end-color: var(--blue-300);
+}
+
+body {
+  margin: 20px;
+}
+/* 이디야 뉴스 */
+.news {
+  background: var(--blue-200);
+  color: var(--white);
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-auto-rows: auto;
+  gap: 8px;
+
+  .news-title,
+  a,
+  time {
+    padding: 0.5em;
+  }
+
+  .news-list,
+  .news-item {
+    display: contents;
+  }
+
+  /* .news-title,
+  .more {
+    order: -1;
+  } */
+
+  a:not(.more) {
+    /* more 빼고 선택*/
+    white-space: nowrap;
+    overflow: hidden; /* 오버플로 되는 건 감출거임*/
+    text-overflow: ellipsis; /* 텍스트 요소 넘어갈때 자연스러운 ...으로*/
+  }
+  .more {
+    grid-area: 1 / 2;
+    justify-self: end;
+  }
+}
+.notice {
+  background: yellow;
+  display: grid;
+  grid-template-columns: 125px minmax(150px, 1fr);
+  font-size: 18px;
+  padding: 16px;
+
+  .notice-title {
+    color: var(--white);
+    padding: 16px 0 16px 16px;
+    background: radial-gradient(circle at left top, var(--start-color), var(--end-color));
+    font-size: 18px;
+  }
+  .notice-content {
+    background: var(--white);
+    padding: 16px;
+
+    h3 {
+      font-size: 18px;
+    }
+    time {
+      color: var(--gray);
+      font-size: 12px;
+    }
+    p {
+      margin-block-start: 16px;
+    }
+  }
+
+  .notice-title,
+  .notice-buttons {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .notice-buttons {
+    place-self: end;
+    display: flex;
+    flex-flow: row nowrap;
+    button {
+      border: 0 none;
+      background: transparent;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+body {
+  margin: 20px;
+}
+.card {
+  border: 1px solid currentColor;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr);
+  grid-template-rows: repeat(4, auto);
+  padding: 16px;
+  gap: 16px;
+
+  figure {
+    /* box-shadow: 0 0 0 10px blanchedalmond;
+    inline-size: 200px; */
+    aspect-ratio: 2 / 1;
+
+    img {
+      inline-size: 100%;
+      block-size: 100%;
+      object-fit: cover;
+      object-position: 20% 30%; /*시작하는 값을 넣게되면 픽셀값으로 계산하여 적산 */
+    }
+  }
+  p {
+    line-height: 1.5em;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+  }
+  a {
+    background: darkturquoise;
+    color: white;
+    justify-self: end;
+    padding: 16px;
+    border-radius: 4px;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-rows: repeat(4, auto);
+  gap: 16px;
+
+  gap: 16px;
+
+  .card {
+    grid-template-rows: subgrid;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-row: span 4;
+  }
+}
