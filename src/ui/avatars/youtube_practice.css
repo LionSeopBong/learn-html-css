@@ -112,7 +112,48 @@ body {
   background: blue;
   .item-part {
     width: 72px;
-    background: blue;
+    background: antiquewhite;
+    justify-content: center;
+
+    .guide-part {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      padding: 18px;
+      font-size: 10px;
+      font-weight: 600;
+
+      .music-icon {
+        width: 24px;
+        height: 100%;
+      }
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: inherit;
+      }
+      span {
+        max-width: 60px;
+        white-space: nowrap;
+        overflow: hidden;
+
+        text-overflow: ellipsis; /* 텍스트 요소 넘어갈때 자연스러운 ...으로*/
+      }
+      svg {
+        margin-top: 18px;
+      }
+      .yt-music svg {
+      width: 24px !important;
+      height: 24px !important;
+      }
+    .my-page-part {
+    }
+    .subscrip-part {
+    }
   }
   .main-part {
     width: 100%;
